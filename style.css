@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Raleway:wght@500&display=swap');
+
+:root {
+    --grid-cols: 1;
+    --grid-rows: 1;
+    background-color: #181818;
+
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+}
+
+
+
+#container {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2vw;
+    padding: 2vw;
+    justify-content: center;
+    align-items: center;
+    background-color: #202020;
+    border: 1px solid #FDFD96;
+    border-radius: 1em;
+    margin-top: auto;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    background-color: #FDFD96;
+    height: auto;
+    width: 100vw;
+    font-size: 1em;
+    font-family: Raleway, sans-serif;
+}
+
+#gridContainer {
+    display: grid;
+    grid-gap: 0px;
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    width: 40vw;
+    background-color: white;
+
+    /*Creates custom properties grid rows and grid cols for us to assign with JS */
+    /* Var allows us to access the value */
+    grid-template-rows: repeat(var(--grid-rows), auto);
+    grid-template-columns: repeat(var(--grid-cols), auto);
+}
+
+#leftColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+
+}
+
+#headerPin {
+    height: auto;
+    padding: 1vw 1vw 0vw 1vw;
+    margin-bottom: auto;
+    font-family: Borel, sans-serif;
+    color: #FF6961;
+    border: 1px solid #FF6961;
+    border-radius: 1em;
+    font-size: 2vw;
+}
+
+
+
+#buttonsContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    border: 1px solid #FDFD96;
+    border-radius: 1em 1em;
+    gap: 2vh;
+    width: 15vw;
+    height: 15vw;
+    padding: 2em 0em;
+
+}
+
+
+.button {
+    width: 10vw;
+    font-size: 1vw;
+    color: #FDFD96;
+    border: 1px solid #FDFD96;
+    background-color: transparent;
+    font-family: Raleway, sans-serif;
+    margin: auto;
+}
+
+.btn-on {
+    background-color: #FDFD96;
+    color: #202020;
+}
+
+.gridItem {
+    /* outline: 1px solid black; */
+    /* -moz-box-sizing: border-box;
+    box-sizing: border-box;  */
+    text-align: center;
+    aspect-ratio: 1;
+}
+
+.gridItemLines {
+    outline: 1px solid black;
+}
+
+
+#sliderContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh; 
+
+}
+
+.slider {
+    -webkit-appearance: none;  /*Override default CSS styles*/
+    appearance: none;
+    width: 10vw; 
+    height: 1.5vh; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+
+  /* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 1vw; /* Set a specific slider handle width */
+    height: 3vh; /* Slider handle height */
+    background: #FDFD96; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
+.slider::-moz-range-thumb {
+width: 1vw; /* Set a specific slider handle width */
+height: 3vh; /* Slider handle height */
+background:#FDFD96; /* Green background */
+cursor: pointer; /* Cursor on hover */
+}

@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html>
-<script src="javascript.js"></script>
+<script src="javascript.js" defer></script>
 <head>
   <meta charset="UTF-8">
-  <title>Page Title</title>
+  <title>Etch-a-Sketch!</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body draggable="false">
+  <div id="container">
+  <div id="gridContainer"></div>
+    <div id="buttonsContainer">
+      <div id="sliderContainer">
+      <input type="range" autocomplete="off" min="16" max="100" value="16" class="slider" id="sliderRange">
+      </div>
+    </div>
+  </div>
+  <div id="footer">Copyright © soonsay @ https://github.com/soonsay </div>
   <script>
   </script>
 </body>
